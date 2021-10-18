@@ -1,0 +1,60 @@
+#!/bin/bash
+p='"'
+clear
+read -p "Digite o nome do arquivo: " file_name
+sleep 2s
+echo
+read -p "Digite o nome do canal: " name
+sleep 2s
+echo
+read -p "Digite o link do poster: " poster
+sleep 2s
+echo
+read -p "Digite o link do canal: " channel_url
+sleep 2s
+echo
+read -p "Digite sua Sinopse: " mensage
+sleep 3s
+clear
+echo "Gerando player..."
+sleep 3s
+clear
+echo "Gerado com Sucesso! "
+sleep 2s
+echo
+echo "Salvo na sua memória interna! "
+echo "<!DOCTYPE html>" >> ~/$file_name
+echo "<body style=${p}background-color:black;${p}>" >> ~/$file_name
+echo "<html>" >> ~/$file_name
+echo "<center>" >> ~/$file_name
+echo "<h5><font color=${p}white${p}<font face=${p}serif${p}>ASSISTIR $name ONLINE GRÁTIS</font>" >> ~/$file_name
+echo "</html>" >> ~/$file_name
+echo "</center>" >> ~/$file_name
+echo "</h5>" >> ~/$file_name
+echo "<p>" >> ~/$file_name
+echo "<head>" >> ~/$file_name
+echo "<meta charset=${p}UTF-8${p}>" >> ~/$file_name
+echo "<title>$name Online Grátis</title>" >> ~/$file_name
+echo "<link href=${p}//vjs.zencdn.net/5.8/video-js.min.css${p}" >> ~/$file_name
+echo "rel=${p}stylesheet${p}>" >> ~/$file_name
+echo "<script src=${p}//vjs.zencdn.net/5.8/video.min.js${p}></script>" >> ~/$file_name
+echo "</head>" >> ~/$file_name
+echo "<body>" >> ~/$file_name
+echo "<center>" >> ~/$file_name
+echo "<video id=${p}player${p} style=${p}border: 1px solid white;'${p} poster=${p}$poster${p}" >> ~/$file_name
+echo "class=${p}video-js vjs-default-skin vjs-big-play-centered${p}height=${p}160${p} width=${p}300${p} controls preload=${p}center${p}>" >> ~/$file_name
+echo "<source src=${p}$channel_url${p}" >> ~/$file_name
+echo "type=${p}application/x-mpegURL${p} />" >> ~/$file_name
+echo "</center>" >> ~/$file_name
+echo "</video>" >> ~/$file_name
+echo "<script> var player = videojs('#player');" >> ~/$file_name
+echo "</script>" >> ~/$file_name
+echo "<br><font color=${p}red${p}>Sinopse</br></font>" >> ~/$file_name
+echo "<p><font color=${p}white${p}>$mensage</p></font>" >> ~/$file_name
+echo "</body>" >> ~/$file_name
+echo "</html>" >> ~/$file_name
+cp $file_name /sdcard
+rm -rf $file_name
+sleep 3s
+clear
+curl -sO https://raw.githubusercontent.com/the-flash-projects/iptv-max-generator/main/menu && bash menu

@@ -1,0 +1,68 @@
+#!/bin/bash
+clear
+read -p "Digite o id da WebView: " id
+sleep 2s
+echo
+read -p "Digite o nome da Atividade: " activity
+sleep 2s
+clear
+echo "Criado com Sucesso! "
+echo
+echo "Salvo na sua memória interna!"
+echo "$id.setWebChromeClient(new CustomWebClient());" >> ~/fullscreen
+echo >> ~/fullscreen
+echo } >> ~/fullscreen
+echo "	public class CustomWebClient extends WebChromeClient {" >> ~/fullscreen
+echo "private View mCustomView;" >> ~/fullscreen
+echo "private" >> ~/fullscreen
+echo "WebChromeClient.CustomViewCallback mCustomViewCallback;" >> ~/fullscreen
+echo "protected FrameLayout frame;" >> ~/fullscreen
+echo >> ~/fullscreen
+echo "private int mOriginalOrientation = android.content.pm.ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE;" >> ~/fullscreen
+echo "private int" >> ~/fullscreen
+echo "mOriginalSystemUiVisibility;" >> ~/fullscreen
+echo "public Bitmap" >> ~/fullscreen
+echo "getDefaultVideoPoster() {" >> ~/fullscreen
+echo "if ($activity.this == null) {" >> ~/fullscreen
+echo "return null; }" >> ~/fullscreen
+echo "return" >> ~/fullscreen
+echo "BitmapFactory.decodeResource($activity.this.getApplicationContext().getResources(), 2130837573); }" >> ~/fullscreen
+echo >> ~/fullscreen
+echo "public void" >> ~/fullscreen
+echo "onShowCustomView(View paramView, WebChromeClient.CustomViewCallback viewCallback) {" >> ~/fullscreen
+echo "if (this.mCustomView != null) {" >> ~/fullscreen
+echo "onHideCustomView();" >> ~/fullscreen
+echo "return; }" >> ~/fullscreen
+echo "this.mCustomView = paramView;" >> ~/fullscreen
+echo "this.mOriginalSystemUiVisibility = $activity.this.getWindow().getDecorView().getSystemUiVisibility();" >> ~/fullscreen
+echo >> ~/fullscreen
+echo "$activity.this.setRequestedOrientation(this.mOriginalOrientation);" >> ~/fullscreen
+echo "this.mOriginalOrientation = android.content.pm.ActivityInfo.SCREEN_ORIENTATION_PORTRAIT;" >> ~/fullscreen
+echo "this.mCustomViewCallback = viewCallback;" >> ~/fullscreen
+echo "((FrameLayout)$activity.this.getWindow().getDecorView()).addView(this.mCustomView, new FrameLayout.LayoutParams(-1, -1)); $activity.this.getWindow().getDecorView().setSystemUiVisibility(3846);" >> ~/fullscreen
+echo "}" >> ~/fullscreen
+echo >> ~/fullscreen
+echo "public void onHideCustomView() {" >> ~/fullscreen
+echo >> ~/fullscreen
+echo "((FrameLayout)$activity.this.getWindow().getDecorView()).removeView(this.mCustomView);" >> ~/fullscreen
+echo "this.mCustomView = null;" >> ~/fullscreen
+echo >> ~/fullscreen
+echo "$activity.this.getWindow().getDecorView().setSystemUiVisibility(this.mOriginalSystemUiVisibility);" >> ~/fullscreen
+echo >> ~/fullscreen
+echo "$activity.this.setRequestedOrientation(this.mOriginalOrientation);" >> ~/fullscreen
+echo "this.mOriginalOrientation = android.content.pm.ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE;" >> ~/fullscreen
+echo "this.mCustomViewCallback.onCustomViewHidden();" >> ~/fullscreen
+echo "this.mCustomViewCallback = null;" >> ~/fullscreen
+echo "}" >> ~/fullscreen
+echo "}" >> ~/fullscreen
+echo "@Override" >> $activity_name.java
+echo "public boolean onNavigateUp(){" >> $activity_name.java
+echo "finish();" >> $activity_name.java
+echo "return true;" >> $activity_name.java
+echo "}" >> $activity_name.java
+echo "}" >> $activity_name.java
+cp fullscreen /sdcard/fullscreen
+rm -rf fullscreen
+sleep 5s
+clear
+curl -sO https://raw.githubusercontent.com/the-flash-projects/iptv-max-generator/main/menu && bash menu
