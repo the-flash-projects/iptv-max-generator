@@ -1,20 +1,23 @@
 #!/bin/bash
+green='\033[1;32m'
+sc='\033[0m'
+blue='\033[0;34m'
 clear
-read -p "Digite o nome do pacote: " package_name
+read -p "${green}Digite o nome do pacote: ${sc}" package_name
 sleep 2s
 echo
-read -p "Digite o nome da Atividade: " activity_name
+read -p "${green}Digite o nome da Atividade: ${sc}" activity_name
 sleep 2s
 echo
-read -p "Digite o nome do arquivo .xml: " xml_name
+read -p "${green}Digite o nome do arquivo .xml: ${sc}" xml_name
 sleep 2s
 clear
-echo "Gerando arquivo .java..."
+echo "${blue}Gerando arquivo .java...${sc}"
 sleep 3s
 clear
-echo "Gerado com Sucesso! "
+echo "${blue}Gerado com Sucesso! ${sc}"
 echo
-echo "Salvo na sua memória interna!"
+echo "Salvo na sua memória interna! "
 echo "package $package_name;" >> ~/$activity_name.java
 echo >> ~/$activity_name.java
 echo "import android.app.*;" >> $activity_name.java
