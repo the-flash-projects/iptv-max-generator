@@ -1,25 +1,28 @@
 #!/bin/bash
+blue='\033[0;34m'
+green='\033[1;32m'
+sc='\033[0m'
 p='"'
 clear
-read -p "Digite o nome do arquivo: " file_name
+read -p "${blue}Digite o nome do arquivo: ${sc}" file_name
 sleep 2s
 echo
-read -p "Digite o nome do canal: " name
+read -p "${blue}Digite o nome do canal: ${sc}" name
 sleep 2s
 echo
-read -p "Digite o link do poster: " poster
+read -p "${blue}Digite o link do poster: ${sc}" poster
 sleep 2s
 echo
-read -p "Digite o link do canal: " channel_url
+read -p "${blue}Digite o link do canal: ${sc}" channel_url
 sleep 2s
 echo
-read -p "Digite sua Sinopse: " mensage
+read -p "${blue}Digite sua Sinopse: ${sc}" mensage
 sleep 3s
 clear
-echo "Gerando player..."
+echo "${green}Gerando player...${sc}"
 sleep 3s
 clear
-echo "Gerado com Sucesso! "
+echo "${green}Gerado com Sucesso! ${sc}"
 sleep 2s
 echo
 echo "Salvo na sua memória interna! "
