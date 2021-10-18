@@ -1,0 +1,25 @@
+#!/bin/bash
+clear
+echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "\E[41;1;37m       • IPTV MAX GERADOR •    \E[0m"
+echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "\033[0m\033[01;37m(1) \033[01;33mGERAR PLAYER HTML\033[0m"
+echo -e "\033[0m\033[01;37m(2) \033[01;33mGERAR ARQUIVO JAVA\033[0m"
+echo -e "\033[0m\033[01;37m(3) \033[01;33mGERAR VIDEO FULLSCREEN\033[0m"
+echo -e "\033[0m\033[01;37m(4) \033[01;33mSAIR\033[0m"
+echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "\033[1;32m O QUE DESEJA FAZER \033[1;33m?\033[1;31m?\033[1;37m : "
+read options
+   case $options in
+   (1)
+   curl -sO https://raw.githubusercontent.com/the-flash-projects/iptv-max-generator/main/player && bash player
+   ;;
+   (2)
+   curl -sO https://raw.githubusercontent.com/the-flash-projects/iptv-max-generator/main/java && bash java
+   ;;
+   (3)
+   curl -sO https://raw.githubusercontent.com/the-flash-projects/iptv-max-generator/main/start && bash start
+   ;;
+   (*) echo -e "\033[1;31mOpção inválida! \033[0m"
+   sleep 2s
+   curl -sO https://raw.githubusercontent.com/the-flash-projects/iptv-max-generator/main/menu && bash menu
