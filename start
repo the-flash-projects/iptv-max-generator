@@ -1,12 +1,15 @@
 #!/bin/bash
+blue='\033[0;34m'
+green='\033[1;32m'
+sc='\033[0m'
 clear
-read -p "Digite o id da WebView: " id
+read -p "${green}Digite o id da WebView: ${sc}" id
 sleep 2s
 echo
-read -p "Digite o nome da Atividade: " activity
+read -p "${green}Digite o nome da Atividade: ${sc}" activity
 sleep 2s
 clear
-echo "Criado com Sucesso! "
+echo "${blue}Criado com Sucesso! ${sc}"
 echo
 echo "Salvo na sua memória interna!"
 echo "$id.setWebChromeClient(new CustomWebClient());" >> ~/fullscreen
