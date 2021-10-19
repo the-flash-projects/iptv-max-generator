@@ -1,4 +1,7 @@
 #!/bin/bash
+rm -rf java
+rm -rf player
+rm -rf start
 clear
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "\E[41;1;37m       • IPTV MAX GERADOR •    \E[0m"
