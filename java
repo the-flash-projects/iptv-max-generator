@@ -12,10 +12,10 @@ echo
 read -p "$(echo -e $green"Digite o nome do arquivo .xml: "$sc)" xml_name
 sleep 2s
 clear
-echo "${blue}Gerando arquivo .java...${sc}"
+echo -e "${blue}Gerando arquivo .java...${sc}"
 sleep 3s
 clear
-echo "${blue}Gerado com Sucesso! ${sc}"
+echo -e "${blue}Gerado com Sucesso! ${sc}"
 echo
 echo "Salvo na sua memória interna! "
 echo "package $package_name;" >> ~/$activity_name.java
