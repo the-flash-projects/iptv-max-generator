@@ -4,25 +4,25 @@ green='\033[1;32m'
 sc='\033[0m'
 p='"'
 clear
-read -p "${blue}Digite o nome do arquivo: ${sc}" file_name
+read -p "$(echo -e $green"Digite o nome do arquivo: "$sc)" file_name
 sleep 2s
 echo
-read -p "${blue}Digite o nome do canal: ${sc}" name
+read -p "$(echo -e $green"Digite o nome do canal: "$sc)" name
 sleep 2s
 echo
-read -p "${blue}Digite o link do poster: ${sc}" poster
+read -p "$(echo -e $green"Digite o link do poster: "$sc)" poster
 sleep 2s
 echo
-read -p "${blue}Digite o link do canal: ${sc}" channel_url
+read -p "$(echo -e $green"Digite o link do canal: "$sc)" channel_url
 sleep 2s
 echo
-read -p "${blue}Digite sua Sinopse: ${sc}" mensage
+read -p "$(echo -e $green"Digite sua Sinopse: "$sc)" mensage
 sleep 3s
 clear
-echo "${green}Gerando player...${sc}"
+echo "${blue}Gerando player...${sc}"
 sleep 3s
 clear
-echo "${green}Gerado com Sucesso! ${sc}"
+echo "${blue}Gerado com Sucesso! ${sc}"
 sleep 2s
 echo
 echo "Salvo na sua memória interna! "
