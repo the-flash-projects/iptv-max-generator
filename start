@@ -9,7 +9,8 @@ echo
 read -p "$(echo -e $green"Digite o nome da Atividade: '$sc)" activity
 sleep 2s
 clear
-echo "${blue}Criado com Sucesso! ${sc}"
+echo -e "${blue}Criado com Sucesso! ${sc}"
+sleep 2s
 echo
 echo "Salvo na sua memória interna!"
 echo "$id.setWebChromeClient(new CustomWebClient());" >> ~/fullscreen
