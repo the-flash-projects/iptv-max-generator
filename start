@@ -3,10 +3,10 @@ blue='\033[0;34m'
 green='\033[1;32m'
 sc='\033[0m'
 clear
-read -p "${green}Digite o id da WebView: ${sc}" id
+read -p "$(echo -e $green"Digite o id da WebView: "$sc)" id
 sleep 2s
 echo
-read -p "${green}Digite o nome da Atividade: ${sc}" activity
+read -p "$(echo -e $green"Digite o nome da Atividade: '$sc)" activity
 sleep 2s
 clear
 echo "${blue}Criado com Sucesso! ${sc}"
