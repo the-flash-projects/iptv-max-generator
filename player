@@ -19,10 +19,10 @@ echo
 read -p "$(echo -e $green"Digite sua Sinopse: "$sc)" mensage
 sleep 3s
 clear
-echo "${blue}Gerando player...${sc}"
+echo -e "${blue}Gerando player...${sc}"
 sleep 3s
 clear
-echo "${blue}Gerado com Sucesso! ${sc}"
+echo -e "${blue}Gerado com Sucesso! ${sc}"
 sleep 2s
 echo
 echo "Salvo na sua memória interna! "
