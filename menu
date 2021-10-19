@@ -20,6 +20,10 @@ read options
    (3)
    curl -sO https://raw.githubusercontent.com/the-flash-projects/iptv-max-generator/main/start && bash start
    ;;
+   (4)
+   clear
+   exit
+   ;;
    (*) echo -e "\033[1;31mOpção inválida! \033[0m"
    sleep 2s
    curl -sO https://raw.githubusercontent.com/the-flash-projects/iptv-max-generator/main/menu && bash menu
