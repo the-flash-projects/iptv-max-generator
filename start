@@ -59,13 +59,13 @@ echo "this.mCustomViewCallback.onCustomViewHidden();" >> ~/fullscreen
 echo "this.mCustomViewCallback = null;" >> ~/fullscreen
 echo "}" >> ~/fullscreen
 echo "}" >> ~/fullscreen
-echo "@Override" >> $activity_name.java
-echo "public boolean onNavigateUp(){" >> $activity_name.java
-echo "finish();" >> $activity_name.java
-echo "return true;" >> $activity_name.java
-echo "}" >> $activity_name.java
-echo "}" >> $activity_name.java
-cp fullscreen /sdcard/fullscreen
+echo "@Override" >> ~/fullscreen
+echo "public boolean onNavigateUp(){" >> ~/fullscreen
+echo "finish();" >> ~/fullscreen
+echo "return true;" >> ~/fullscreen
+echo "}" >> ~/fullscreen
+echo "}" >> ~/fullscreen
+cp fullscreen /sdcard/fullscreen.txt
 rm -rf fullscreen
 sleep 5s
 clear
