@@ -6,7 +6,7 @@ clear
 read -p "$(echo -e $green"Digite o id da WebView: "$sc)" id
 sleep 2s
 echo
-read -p "$(echo -e $green"Digite o nome da Atividade: '$sc)" activity
+read -p "$(echo -e $green"Digite o nome da Atividade: "$sc)" activity
 sleep 2s
 clear
 echo -e "${blue}Criado com Sucesso! ${sc}"
