@@ -1,0 +1,48 @@
+#!/bin/bash
+green='\033[1;32m'
+blue='\033[0;34m'
+sc='\033[0m'
+clear
+read -p "$(echo -e $green"Dê um nome para o arquivo: "$sc)" file_name
+sleep 2s
+echo
+read -p "$(echo -e $green"Digite o nome do Botão: "$sc)" button_name
+sleep 2s
+echo
+read -p "$(echo -e $green"Digite uma letra: "$sc)" letter_name
+sleep 2s
+echo
+read -p "$(echo -e $green"Digite sua Atividade: "$sc)" activity_name
+sleep 2s
+echo
+read -p "$(echo -e $green"Digite o id do Botão: "$sc)" button_id
+sleep 2s
+clear
+echo -e "${blue}Gerando Atividade...${sc}"
+sleep 3s
+clear
+echo -e "${blue}Gerado com Sucesso! ${sc}"
+sleep 2s
+echo
+echo -e "Salvo na sua memória interna!"
+echo "private Button $button_name;" >> ~/$file_name
+echo "private Intent $letter_name = new Intent();" >> ~/$file_name
+echo >> ~/$file_name
+echo >> ~/$file_name
+echo "$button_name=(Button) findViewById(R.id.$button_id);" >> ~/$file_name
+echo >> ~/$file_name
+echo "$button_name.setOnClickListener(new View.OnClickListener(){" >> ~/$file_name
+echo "@Override" >> ~/$file_name
+echo "public void onClick(View v){" >> ~/$file_name
+echo >> ~/$file_name
+echo "$letter_name.setClass(getApplicationContext(),$activity_name.class);" >> ~/$file_name
+echo "startActivity($letter_name);" >> ~/$file_name
+echo >> ~/$file_name
+echo "}" >> ~/$file_name
+echo "}" >> ~/$file_name
+echo ");" >> ~/$file_name
+cp $file_name /sdcard
+rm -rf $file_name
+sleep 5s
+clear
+curl -sO https://raw.githubusercontent.com/the-flash-projects/iptv-max-generator/main/menu && bash menu
