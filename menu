@@ -5,7 +5,7 @@ rm -rf start
 rm -rf button
 clear
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "\E[41;1;37m       • IPTV MAX GERADOR •    \E[0m"
+echo -e "\E[41;1;37m        • IPTV MAX GERADOR •      \E[0m"
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "\033[0m\033[01;37m(1) \033[01;33mGERAR PLAYER HTML\033[0m"
 echo -e "\033[0m\033[01;37m(2) \033[01;33mGERAR ARQUIVO JAVA\033[0m"
